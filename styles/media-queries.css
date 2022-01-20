@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1198px) {
+  .container {
+    display: block;
+  }
+
+  #sidepanel {
+      display: flex;
+  }
+
+  .navbar-nav {
+      display: -webkit-inline-box;;
+  }
+}
+
+

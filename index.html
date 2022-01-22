@@ -18,10 +18,14 @@
         <link rel="stylesheet" href="styles\side-panel.styles.css" />
         <link rel="stylesheet" href="styles\content.styles.css">
 
+        <script src="index.js"></script>
+
         <title>Laxmi's Portfolio</title>
     </head>
     <body>
         <div class="container">
+
+            <!--Side panel section start-->
             <div id="sidepanel">
                 <div  style="position: sticky; top: 0">             <!-- extra div for making side-bar sticky -->
                     <div class="box">
@@ -32,10 +36,10 @@
                     <div class="side-nav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home</a>
+                                <a class="nav-link" href="#home">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About Me</a>
+                                <a class="nav-link" href="#about-me" onclick="startAnimation()">About Me</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Skills</a>
@@ -66,24 +70,75 @@
                 </div>
                 </div>
             </div>
-            
-            <section id="home">
-                <div id="content">
-                    <div>
-                        <div id="intro" >
-                            <h3 id="content-h3">Hi there !</h3>
-                            <h2 id="content-h2">My name is</h2>
-                            <h1 id="content-h1">Laxmi Gowthami Ittappa</h1>
+            <!--Side panel section start-->
+
+            <div id="content-main">
+
+                <!--Home section start-->
+                <section id="home">
+                    <div id="content">
+                        <div id="left-content">
+                            <div id="intro" >
+                                <h3 id="content-h3">Hi there !</h3>
+                                <h2 id="content-h2">My name is</h2>
+                                <h1 id="content-h1">Laxmi Gowthami Ittappa</h1>
+                            </div>
+                            <div id="cv-button">
+                                <button class="btn btn-bg btn-primary" id="btn-cv">Download CV</button>
+                            </div>
+                            <div id="scroll-down-btn-div">
+                                <a href="#about-me" class="btn btn-icon btn-lg" id="scroll-btn"><i class="fas fa-chevron-down"></i></a>
+                            </div>
                         </div>
-                        <div id="cv-button">
-                            <button class="btn btn-bg btn-primary" id="btn-cv">Download CV</button>
+                        <div class="image w3-animate-right">
+                            <img src="images\home-img.png" alt="" srcset="" id="first-img">
                         </div>
                     </div>
-                    <div class="image w3-animate-right">
-                        <img src="images\home-img.png" alt="" srcset="" id="first-img">
+                </section>
+                <!--Home section end-->
+
+                <!--About me section start-->
+                <section id="about-me">
+                    <div id="about-me-boxes">
+                        <div id="about-me-box1">
+                            <img src="images\about-me.png" alt="" srcset="" id="img-about-me">
+                        </div>
+                        <div id="about-me-box2">
+                            <h3 id="h3-about-me">About me</h3>
+                            <p id="p-about-me">
+                                " A highly motivated and hardworking individual, seeking employement as a Web Developer, where I can make the best of my potential and contribute to the organization’s growth. " 
+                            </p>
+                            <div id="box-2-content">
+                                <table class="table" id="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Name :</th>
+                                            <td id="td">Laxmi Gowthami Ittappa</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Date of Birth :</th>
+                                            <td id="td">28 September 1999</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Gender :</th>
+                                            <td id="td">Female</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Nationality :</th>
+                                            <td id="td">Indian</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Current Location :</th>
+                                            <td id="td">Udupi, Karnataka</td>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <!--About me section end-->
+            </div>
         </div>
     </body>
 </html>

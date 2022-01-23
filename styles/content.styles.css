@@ -240,3 +240,90 @@
     font-family: 'Outfit', sans-serif;
     font-weight: bolder;
 }
+
+/*-------------------------------End of  section-----------------------------------*/
+
+/**/
+
+/*-------------------------------Begin of Skills section--------------------------------*/
+
+#skills-box {
+    margin: 18px;
+    box-shadow: 0px 0px 14px grey;
+    padding-bottom: 20px;
+}
+
+#skills-heading-div {
+    margin-left: 30px;
+}
+
+#h3-skills {
+    font-family: 'Outfit', sans-serif;
+    font-weight: bolder;
+    padding: 30px 0px 6px 0px;
+    margin: 0;
+}
+
+#p-skills > p {
+    font-family: 'Outfit', sans-serif;
+    text-align: center;
+}
+
+#skills-bars {
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.skills-list {
+    width: 14%;
+    border: 2px solid rgb(206, 201, 201);
+    border-radius: 4px;
+    padding: 10px 0;
+}
+
+.h5-skills-list {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+}
+
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+  }
+  
+  @property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+  }
+  
+  div[role="progressbar"] {
+    --size: 5rem;
+    --fg: #369;
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: 
+      radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+      conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+      ;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: calc(var(--size) / 5);
+    color: var(--fg);
+    margin: auto;
+  }
+  
+  div[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+  }
